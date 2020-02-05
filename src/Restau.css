@@ -1,0 +1,34 @@
+.restauFig {
+    border: 0.3em;
+    background-color: #f6ae2d;
+    border-radius: 1%;
+}
+
+.restauImg {
+    max-width: 90%;
+}
+
+
+@media screen and (min-width: 480px) {
+    .restauImg {
+        max-width: 80%;
+    }
+}
+
+@media screen and (min-width: 620px) {
+    .restauImg {
+        max-width: 65%;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .restauImg {
+        max-width: 80%;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    .restauImg {
+        max-width: 80%;
+    }
+}

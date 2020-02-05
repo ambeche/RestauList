@@ -1,0 +1,22 @@
+.restauList {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+@media screen and (min-width: 750px) {
+    .restauList {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    .restauList {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+.restauImg {
+    border: 0.2em solid #758e4f;
+    
+    border-radius: 1%;
+}
