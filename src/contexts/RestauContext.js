@@ -659,8 +659,14 @@ const restauList = {
   ]
 };
 
+const sortedStatus = {
+  value: "Sort Alphabetically",
+  class: "unsorted",
+  importance: "unsorted",
+};
+
 const RestauProvider = props => {
-  const [restau, setRestau] = useState(restauList);
+  const [restau, setRestau] = useState({restauList,sortedStatus});
   return (
     <RestauContext.Provider value={[restau, setRestau]}>
       {props.children}

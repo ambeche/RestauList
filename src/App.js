@@ -1,17 +1,19 @@
-import React from 'react';
-import './App.css';
-import { RestauProvider } from './contexts/RestauContext';
-import RestauList from './components/RestauList';
-import Header from './components/Header';
+import React from "react";
+import "./App.css";
+import { RestauProvider } from "./contexts/RestauContext";
+import RestauList from "./components/RestauList";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <RestauProvider>
-      <div className="App">
-        <Header/>
+    <div className="App">
+      <RestauProvider>
+        <Header />
         <RestauList />
-      </div>
-    </RestauProvider>
+        <Footer/>
+      </RestauProvider>
+    </div>
   );
 };
 

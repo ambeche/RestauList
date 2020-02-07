@@ -3,7 +3,7 @@
 }
 
 
-.header {
+.header, .footer {
   background-color: #404E2C;
   margin-left: auto;
   margin-right: auto;
@@ -32,8 +32,8 @@ button {
   }
 }
 
-@media screen and (min-width: 1150px) {
-  .header {
+@media screen and (min-width: 480px) {
+  .footer {
       grid-template-columns: auto  auto;
   }
 }
