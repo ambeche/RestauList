@@ -30,15 +30,21 @@ const Restau = () => {
 
   return (
     <>
-      {toggleSortByName().map(({ image, name, description, tags }) => (
-        <figure key={name} className="restauFig">
-          <img src={image} alt={description} className="restauImg" />
-          <p style={style}>{name}</p>
-          <p>
-            Food Types: {tags[0]}, {tags[1]}
-          </p>
-        </figure>
-      ))}
+      {toggleSortByName().map(
+        ({ image, name, description, tags, currency, delivery_price }) => (
+          <figure key={name} className="restauFig">
+            <img src={image} alt={description} className="restauImg" />
+            <p style={style}>{name}</p>
+            <p>
+              Delivery: {delivery_price / 100}
+              {currency}
+            </p>
+            <p>
+              Food Types: {tags[0]}, {tags[1]}
+            </p>
+          </figure>
+        )
+      )}
     </>
   );
 };
