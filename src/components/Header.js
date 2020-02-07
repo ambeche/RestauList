@@ -6,7 +6,7 @@ const Header = () => {
   const status = restau.sortedStatus;
   
   const setSortedStatus = () => {
-    
+    //Event handler updates the states when the sort button is clicked
     if (status.importance === "unsorted") {
       setRestau({
         ...restau, 
@@ -14,14 +14,14 @@ const Header = () => {
         class: status.class = "sorted",
         importance: status.importance = "sort",
         
-       });
+       }); 
     } else if (status.importance === "sort") {
       setRestau({
         ...restau,
         value: status.value = "Reset or Shuffle",
         class: status.class = "sorted",
         importance: status.importance = "reverse",
-      });
+      }); 
     } else
     setRestau({
       ...restau,
@@ -30,7 +30,7 @@ const Header = () => {
       importance: status.importance = "unsorted",
     });
   };
-
+  
   return (
     <div className="header">
       <h1>Choose a Restaurant and have your food delivered!</h1>

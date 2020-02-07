@@ -1,9 +1,11 @@
+// A stateful Context is created to manage data and states, and the ContextProvider is 
+// initialized with the restaurants data
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 const RestauContext = React.createContext([{}, () => {}]);
 
-const restauList = {
+const restauData = {
   restaurants: [
     {
       blurhash: "UUKJMXv|x]oz0gtRM{V@AHRQwvxZXSs9s;o0",
@@ -662,11 +664,11 @@ const restauList = {
 const sortedStatus = {
   value: "Sort Alphabetically",
   class: "unsorted",
-  importance: "unsorted",
+  importance: "unsorted"
 };
 
 const RestauProvider = props => {
-  const [restau, setRestau] = useState({restauList,sortedStatus});
+  const [restau, setRestau] = useState({ restauData, sortedStatus });
   return (
     <RestauContext.Provider value={[restau, setRestau]}>
       {props.children}

@@ -2,18 +2,21 @@ import React, { useContext } from "react";
 import { RestauContext } from "../contexts/RestauContext";
 import "../Restau.css";
 
+// Restau component populates a grid with restaurant objects from an array
 const Restau = () => {
   const [restau] = useContext(RestauContext);
+  const importance = restau.sortedStatus.importance;
 
+  // sorts restaurants by name based on the importance state
   const toggleSortByName = () => {
     const sortedArray = []
-      .concat(restau.restauList.restaurants)
-      .sort((a, b) => a.name.localeCompare(b.name));
-    const importance = restau.sortedStatus.importance;
-    console.log('status-Restau', restau.sortedStatus);
-    return importance === 'unsorted'
-      ? restau.restauList.restaurants
-      : importance === 'sort'
+      .concat(restau.restauData.restaurants)
+      .sort((a, b) => a.name.localeCompare(b.name)); // sorts a copy of the state, restaurants
+
+    console.log("status-Restau", restau.sortedStatus);
+    return importance === "unsorted"
+      ? restau.restauData.restaurants
+      : importance === "sort"
       ? sortedArray
       : sortedArray.reverse();
   };
