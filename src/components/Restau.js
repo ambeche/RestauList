@@ -26,6 +26,7 @@ const Restau = () => {
     fontWeight: 900,
     color: "#ffffff"
   };
+  
   console.log("field", restau);
 
   return (

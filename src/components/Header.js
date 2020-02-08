@@ -29,6 +29,7 @@ const Header = () => {
       class: status.class = "unsorted",
       importance: status.importance = "unsorted",
     });
+    console.log('status', restau.sortedStatus);
   };
   
   return (
